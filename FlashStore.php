@@ -2,7 +2,7 @@
 
 namespace sammaye\Flash;
 
-use Illuminate\Support\Facades\Session;
+use Illuminate\Session\Store;
 
 class FlashStore
 {
@@ -13,14 +13,14 @@ class FlashStore
 
     private $key = 'flash_store';
 
-    public function __construct(Session $session)
+    public function __construct(Store $session)
     {
         $this->session  = $session;
         $this->messages = collect();
 
-        if ($this->session::has($this->key)) {
+        if ($this->session->has($this->key)) {
             $this->messages = collect(
-              $this->session::get(
+              $this->session->get(
                 $this->key,
                 []
               )
@@ -51,7 +51,7 @@ class FlashStore
     public function message($type, $message, $dismissible = false)
     {
         $this->messages->push([$type, $message, $dismissible]);
-        $this->session::put($this->key, $this->messages);
+        $this->session->put($this->key, $this->messages);
     }
 
     public function messages()
@@ -62,6 +62,6 @@ class FlashStore
     public function clear()
     {
         $this->messages = collect();
-        $this->session::forget($this->key);
+        $this->session->forget($this->key);
     }
 }
