@@ -1,5 +1,5 @@
 @foreach (Flash::messages() as $message)
-    <div class="alert alert-{{ $message[0] }}{{ $message[2] ? ' alert-dismissible fade show' : '' }}" role="alert">
+    <div class="alert alert-{{ $message[0] }}{{ $message[2] ? ' alert-dismissible fade show' : '' }} mb-0" role="alert">
         {{ $message[1] }}
         @if ($message[2])
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
