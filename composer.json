@@ -14,17 +14,17 @@
   },
   "autoload": {
     "psr-0": {
-      "sammaye\\Flash": ""
+      "sammaye\\Flash": "src"
     }
   },
   "minimum-stability": "stable",
   "extra": {
     "laravel": {
       "providers": [
-        "sammaye\\Flash\\FlashServiceProvider"
+        "sammaye\\Flash\\Providers\\FlashServiceProvider"
       ],
       "aliases": {
-        "Flash": "sammaye\\Flash\\Flash"
+        "Flash": "sammaye\\Flash\\Support\\Flash"
       }
     }
   }

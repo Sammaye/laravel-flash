@@ -1,6 +1,6 @@
 <?php
 
-namespace sammaye\Flash;
+namespace sammaye\Flash\Support;
 
 use Illuminate\Support\Facades\Facade;
 
