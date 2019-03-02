@@ -42,5 +42,5 @@ This plugin registers all of its views at the flash namespace and only has one v
 This plugin also registers the view for publishing as such you can do this to enable the view to be overridden:
 
 ```php
-php artisan vendor:publish --provider="sammaye\Flash\FlashServiceProvider"
+php artisan vendor:publish --provider="sammaye\Flash\Providers\FlashServiceProvider"
 ``` 
