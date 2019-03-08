@@ -1,6 +1,7 @@
 {
   "name": "sammaye/laravel-flash",
   "description": "My very Laravel first plugin, based on https://github.com/laracasts/flash",
+  "keywords": ["laravel"],
   "license": "MIT",
   "authors": [
     {
